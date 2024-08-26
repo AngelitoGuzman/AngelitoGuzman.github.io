@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELAS Y BOTONES D.C</title>
+    <link rel="shortcut icon" href="image/LOGOTITLE.jpg">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita el desplazamiento en la página principal */
+        }
+        .frame-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .frame-container iframe {
+            border: none;
+            overflow: hidden; /* Evita barras de desplazamiento en iframes */
+        }
+        
+        /* Estilos generales para la página */
+        .menu {
+            height: 16%; /* Altura por defecto para pantallas grandes */
+        }
+        .content {
+            height: 84%; /* Altura por defecto para pantallas grandes */
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 767px) {
+            .menu {
+                height: 10%; /* Menor altura para la barra de navegación en móviles */
+            }
+            .content {
+                height: 90%; /* Mayor altura para el contenido principal en móviles */
+            }
+        }
+
+        /* Estilos para tablets */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .menu {
+                height: 12%; /* Ajuste de altura para tablets */
+            }
+            .content {
+                height: 88%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="frame-container">
+        <iframe class="menu" src="MENUDENAVEGACION.html"></iframe>
+        <iframe class="content" src="PANTALLAINICIO.html" name="1"></iframe>
+    </div>
+</body>
+</html>
